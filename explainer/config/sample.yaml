@@ -1,0 +1,33 @@
+
+## This is the config file for caltech 256 code
+
+# Training/Testing Configuration 
+epochs: 10
+batch_size: 16
+
+# Path
+influence_path: 'influence/'
+weights_dir: 'weights/'
+confusion_matrix_path: 'confusion_matrix/caltech_confusion_matrix.npy'
+X_train_path: 'Caltech/train_x.npy'
+Y_train_path: 'Caltech/train_y.npy'
+X_test_path: 'Caltech/test_x.npy'
+Y_test_path: 'Caltech/test_y.npy'
+explain_batch: 'explain_caltech_index.npy'
+
+# Model Configuration
+pretrained: 'DenseNetCaltech.h5'
+img_row: 224
+img_column: 224
+img_channel: 3
+nb_classes: 257
+input_layer: data
+prob_layer: 'fc6'
+last_conv: 'concatenate_58'
+
+# Flags
+save_influence: False
+
+# Influence 
+visulization_direction: high
+grad_type: 'Smooth' # Vanilia or Smooth
